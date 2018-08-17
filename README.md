@@ -22,7 +22,7 @@ pod 'OSComponents'
 
 ## Author
 
-MatheusFV, matheus.venosa@usp.br
+Outsmart
 
 ## License
 
