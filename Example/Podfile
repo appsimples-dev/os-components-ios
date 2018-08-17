@@ -2,6 +2,10 @@ use_frameworks!
 
 target 'OSComponents_Example' do
   pod 'OSComponents', :path => '../'
+  pod 'AlamofireImage', '~> 3.3'
+  pod 'Moya/RxSwift', '~> 10.0.1'
+  pod 'ObjectMapper', '~> 3.3.0'
+  pod 'Reusable', '~> 4.0.0'
 
   target 'OSComponents_Tests' do
     inherit! :search_paths

@@ -1,0 +1,6 @@
+framework module OSComponents {
+  umbrella header "OSComponents-umbrella.h"
+
+  export *
+  module * { export * }
+}

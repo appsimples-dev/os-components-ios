@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6U6-tz-B5X" customClass="OSSimpleTableViewCell" customModule="baseproject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6U6-tz-B5X" id="fD1-fb-tUr">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="63.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ip3-xc-3bU" customClass="OSCellImage" customModule="baseproject" customModuleProvider="target">
+                        <rect key="frame" x="16" y="14" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="TFY-Ww-6DA"/>
+                            <constraint firstAttribute="width" constant="40" id="gGf-RC-jvp"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="tYX-nM-Yr2" customClass="OSCellInfo" customModule="baseproject" customModuleProvider="target">
+                        <rect key="frame" x="72" y="8" width="122" height="47.5"/>
+                    </view>
+                    <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8S9-ar-cXZ" customClass="OSCellButtons" customModule="baseproject" customModuleProvider="target">
+                        <rect key="frame" x="194" y="16" width="110" height="36"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="36" id="fa9-cQ-fq4"/>
+                            <constraint firstAttribute="width" constant="110" id="gOi-Ko-fIf"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="tYX-nM-Yr2" secondAttribute="bottom" constant="8" id="EAb-eG-GdU"/>
+                    <constraint firstAttribute="trailing" secondItem="8S9-ar-cXZ" secondAttribute="trailing" constant="16" id="Zh4-sW-39Q"/>
+                    <constraint firstItem="ip3-xc-3bU" firstAttribute="leading" secondItem="fD1-fb-tUr" secondAttribute="leading" constant="16" id="ZzK-4w-n1i"/>
+                    <constraint firstItem="tYX-nM-Yr2" firstAttribute="leading" secondItem="fD1-fb-tUr" secondAttribute="leading" constant="72" id="h1l-mb-l77"/>
+                    <constraint firstItem="tYX-nM-Yr2" firstAttribute="top" secondItem="fD1-fb-tUr" secondAttribute="top" constant="8" id="nqU-qD-1rL"/>
+                    <constraint firstItem="8S9-ar-cXZ" firstAttribute="top" secondItem="fD1-fb-tUr" secondAttribute="top" constant="16" id="pGE-Yg-WFH"/>
+                    <constraint firstItem="8S9-ar-cXZ" firstAttribute="leading" secondItem="tYX-nM-Yr2" secondAttribute="trailing" id="rNr-Mf-nwZ"/>
+                    <constraint firstItem="ip3-xc-3bU" firstAttribute="top" secondItem="fD1-fb-tUr" secondAttribute="top" constant="14" id="wt6-lk-qOZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="UdB-1U-5CA"/>
+            <connections>
+                <outlet property="buttonHeight" destination="fa9-cQ-fq4" id="QEe-fF-46Q"/>
+                <outlet property="buttonWidth" destination="gOi-Ko-fIf" id="ifg-QW-dMk"/>
+                <outlet property="cellButtons" destination="8S9-ar-cXZ" id="AcL-nt-t4r"/>
+                <outlet property="cellImage" destination="ip3-xc-3bU" id="zWH-1d-LTP"/>
+                <outlet property="cellInfo" destination="tYX-nM-Yr2" id="ett-9D-Oxb"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

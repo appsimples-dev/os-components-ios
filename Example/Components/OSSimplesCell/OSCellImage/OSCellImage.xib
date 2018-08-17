@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OSCellImage" customModule="OSComponents" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="Voz-Ql-fsS" id="qf3-Xe-94K"/>
+                <outlet property="primaryImageView" destination="Rmr-q1-GEe" id="p0x-xr-i2C"/>
+                <outlet property="secondaryImageView" destination="fMh-rA-Il9" id="GdE-2s-6fh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Voz-Ql-fsS">
+            <rect key="frame" x="0.0" y="0.0" width="225" height="208"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rmr-q1-GEe">
+                    <rect key="frame" x="0.0" y="0.0" width="225" height="208"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fMh-rA-Il9">
+                    <rect key="frame" x="124" y="114.5" width="101" height="93.5"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMF-tL-Xnp">
+                    <rect key="frame" x="0.0" y="0.0" width="225" height="208"/>
+                    <connections>
+                        <action selector="imageClick:" destination="-1" eventType="touchUpInside" id="q9x-pw-pZZ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="fMh-rA-Il9" firstAttribute="height" secondItem="Rmr-q1-GEe" secondAttribute="height" multiplier="0.45" id="17J-mc-zIO"/>
+                <constraint firstItem="juP-KD-klB" firstAttribute="bottom" secondItem="vMF-tL-Xnp" secondAttribute="bottom" id="7SJ-Hx-q3E"/>
+                <constraint firstItem="vMF-tL-Xnp" firstAttribute="top" secondItem="juP-KD-klB" secondAttribute="top" id="Gtt-XO-7lS"/>
+                <constraint firstItem="Rmr-q1-GEe" firstAttribute="top" secondItem="Voz-Ql-fsS" secondAttribute="top" id="HBy-or-W8W"/>
+                <constraint firstItem="juP-KD-klB" firstAttribute="trailing" secondItem="vMF-tL-Xnp" secondAttribute="trailing" id="Hdh-du-8Hj"/>
+                <constraint firstAttribute="trailing" secondItem="fMh-rA-Il9" secondAttribute="trailing" id="RuK-q6-tml"/>
+                <constraint firstItem="Rmr-q1-GEe" firstAttribute="leading" secondItem="Voz-Ql-fsS" secondAttribute="leading" id="TM9-0h-NQ2"/>
+                <constraint firstItem="fMh-rA-Il9" firstAttribute="width" secondItem="Rmr-q1-GEe" secondAttribute="width" multiplier="0.45" id="boK-cj-tBw"/>
+                <constraint firstItem="juP-KD-klB" firstAttribute="bottom" secondItem="fMh-rA-Il9" secondAttribute="bottom" id="hrP-te-SnI"/>
+                <constraint firstAttribute="trailing" secondItem="Rmr-q1-GEe" secondAttribute="trailing" id="q0A-Yf-Tri"/>
+                <constraint firstItem="vMF-tL-Xnp" firstAttribute="leading" secondItem="juP-KD-klB" secondAttribute="leading" id="qyJ-7a-kca"/>
+                <constraint firstAttribute="bottom" secondItem="Rmr-q1-GEe" secondAttribute="bottom" id="wuQ-cF-ZRs"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="juP-KD-klB"/>
+            <point key="canvasLocation" x="115.5" y="135"/>
+        </view>
+    </objects>
+</document>

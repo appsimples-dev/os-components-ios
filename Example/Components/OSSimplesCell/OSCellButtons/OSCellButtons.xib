@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OSCellButtons" customModule="OSComponents" customModuleProvider="target">
+            <connections>
+                <outlet property="centerButton" destination="N5t-4W-scn" id="sMi-1n-V7t"/>
+                <outlet property="contentView" destination="uWD-tI-Elf" id="Rzc-AW-C8d"/>
+                <outlet property="leftButton" destination="mSY-0c-4Gw" id="X42-w8-DaN"/>
+                <outlet property="rightButton" destination="vWC-RA-xdh" id="J5S-TR-vwq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="uWD-tI-Elf">
+            <rect key="frame" x="0.0" y="0.0" width="239" height="75"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5t-4W-scn">
+                    <rect key="frame" x="8" y="19" width="231" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="958-LE-2dY"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="centerButtonClick:" destination="-1" eventType="touchUpInside" id="AC3-Uy-1ZP"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSY-0c-4Gw">
+                    <rect key="frame" x="159" y="19.5" width="36" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="36" id="Rge-sR-AbZ"/>
+                        <constraint firstAttribute="height" constant="36" id="blm-4f-DwX"/>
+                    </constraints>
+                    <connections>
+                        <action selector="leftButtonClick:" destination="-1" eventType="touchUpInside" id="sk5-DM-E3h"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWC-RA-xdh">
+                    <rect key="frame" x="203" y="19.5" width="36" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="dZB-FZ-s5m"/>
+                        <constraint firstAttribute="width" constant="36" id="neJ-v9-b2X"/>
+                    </constraints>
+                    <connections>
+                        <action selector="rightButtonClick:" destination="-1" eventType="touchUpInside" id="bpP-hK-a5n"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="mSY-0c-4Gw" firstAttribute="centerY" secondItem="cTe-yB-SnH" secondAttribute="centerY" id="7p4-wh-oUi"/>
+                <constraint firstItem="N5t-4W-scn" firstAttribute="leading" secondItem="cTe-yB-SnH" secondAttribute="leading" constant="8" id="8a3-Cf-c9m"/>
+                <constraint firstItem="N5t-4W-scn" firstAttribute="centerY" secondItem="cTe-yB-SnH" secondAttribute="centerY" id="c66-lZ-mhk"/>
+                <constraint firstItem="cTe-yB-SnH" firstAttribute="trailing" secondItem="vWC-RA-xdh" secondAttribute="trailing" id="gQS-P2-GKW"/>
+                <constraint firstItem="cTe-yB-SnH" firstAttribute="trailing" secondItem="N5t-4W-scn" secondAttribute="trailing" id="s6N-o1-6Sh"/>
+                <constraint firstItem="vWC-RA-xdh" firstAttribute="centerY" secondItem="cTe-yB-SnH" secondAttribute="centerY" id="ul7-tl-zHo"/>
+                <constraint firstItem="vWC-RA-xdh" firstAttribute="leading" secondItem="mSY-0c-4Gw" secondAttribute="trailing" constant="8" id="zZs-Fg-W74"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="cTe-yB-SnH"/>
+            <point key="canvasLocation" x="-34.5" y="-211.5"/>
+        </view>
+    </objects>
+</document>
