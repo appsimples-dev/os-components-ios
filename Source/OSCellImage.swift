@@ -39,7 +39,6 @@ public class OSCellImage: UIView {
         setupFrames()
     }
     
-    
     public func setPrimaryImage(imageUrl: String?, placeholder: UIImage?, delegate: OSCellImageDelegate?) {
         primaryImageView.circularCorners()
         primaryImageView.isHidden = false
