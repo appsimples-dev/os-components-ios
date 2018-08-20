@@ -8,6 +8,7 @@
 
 import UIKit
 import ObjectMapper
+import OSComponents
 
 class CommentsExampleViewController: UIViewController {
     

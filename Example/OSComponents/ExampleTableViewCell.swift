@@ -8,6 +8,7 @@
 
 import UIKit
 import Reusable
+import OSComponents
 
 class ExampleTableViewCell: UITableViewCell, NibReusable {
 

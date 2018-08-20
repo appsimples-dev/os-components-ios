@@ -9,19 +9,19 @@
 import Foundation
 import UIKit
 
-protocol OSCellButtonsDelegate: class {
+public protocol OSCellButtonsDelegate: class {
     func onClick()
     func onLeftClick()
     func onRightClick()
 }
 
-enum OSCellButtonsTypes {
+public enum OSCellButtonsTypes {
     case single
     case double
     case none
 }
 
-class OSCellButtons: UIView {
+public class OSCellButtons: UIView {
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var centerButton: UIButton!
@@ -35,12 +35,12 @@ class OSCellButtons: UIView {
         commonInit()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
     }
     
-    func configWith(delegate: OSCellButtonsDelegate, data: OSCellButtonsData, type: OSCellButtonsTypes) {
+    public func configWith(delegate: OSCellButtonsDelegate, data: OSCellButtonsData, type: OSCellButtonsTypes) {
         self.delegate = delegate
         buttonsData = data
         if type == OSCellButtonsTypes.single {
@@ -98,7 +98,8 @@ class OSCellButtons: UIView {
     }
     
     func commonInit() {
-        Bundle.main.loadNibNamed("OSCellButtons", owner: self, options: nil)
+        let podBundle = Bundle(for: self.classForCoder)
+        podBundle.loadNibNamed("OSCellButtons", owner: self, options: nil)
         addSubview(contentView)
         setupFrames()
     }
@@ -133,7 +134,7 @@ class OSCellButtons: UIView {
     }
 }
 
-struct OSCellButtonsData {
+public struct OSCellButtonsData {
     var type: OSCellButtonsTypes!
     var color: UIColor?
     var rightColor: UIColor?

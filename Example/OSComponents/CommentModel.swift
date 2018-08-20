@@ -8,6 +8,7 @@
 
 import Foundation
 import ObjectMapper
+import OSComponents
 
 struct CommentModel: Mappable {
     var image: String = ""

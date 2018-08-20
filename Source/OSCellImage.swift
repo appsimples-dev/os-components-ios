@@ -11,12 +11,12 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
-protocol OSCellImageDelegate {
+public protocol OSCellImageDelegate {
     func imageClick()
 }
 
 // Input: primaryImageUrl, secondaryImageUrl
-class OSCellImage: UIView {
+public class OSCellImage: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet internal var secondaryImageView: UIImageView!
     @IBOutlet internal var primaryImageView: UIImageView!
@@ -27,19 +27,20 @@ class OSCellImage: UIView {
         commonInit()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
     }
     
     func commonInit() {
-        Bundle.main.loadNibNamed("OSCellImage", owner: self, options: nil)
+        let podBundle = Bundle(for: self.classForCoder)
+        podBundle.loadNibNamed("OSCellImage", owner: self, options: nil)
         addSubview(contentView)
         setupFrames()
     }
     
     
-    func setPrimaryImage(imageUrl: String?, placeholder: UIImage?, delegate: OSCellImageDelegate?) {
+    public func setPrimaryImage(imageUrl: String?, placeholder: UIImage?, delegate: OSCellImageDelegate?) {
         primaryImageView.circularCorners()
         primaryImageView.isHidden = false
         if let imageUrl = imageUrl, let url = URL(string: imageUrl) {
@@ -52,7 +53,7 @@ class OSCellImage: UIView {
         self.delegate = delegate
     }
     
-    func setSecondaryImage(imageUrl: String?, placeholder: UIImage?) {
+    public func setSecondaryImage(imageUrl: String?, placeholder: UIImage?) {
         secondaryImageView.circularCorners()
         secondaryImageView.isHidden = false
         if let imageUrl = imageUrl, let url = URL(string: imageUrl) {

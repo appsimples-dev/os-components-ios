@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import OSComponents
 
 class SimpleCellConfiguration {
     class func configNotificationCell() -> OSSimpleCellConfiguration {

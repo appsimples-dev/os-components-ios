@@ -10,13 +10,13 @@ import Foundation
 import UIKit
 import Reusable
 
-protocol OSTableViewDelegate: class {
+public protocol OSTableViewDelegate: class {
     func configCell(with model: Any, for indexPath: IndexPath) -> UITableViewCell
     func swipeRefresh()
     func paginate()
 }
 
-class OSTableView: UITableView {
+public class OSTableView: UITableView {
     
     weak var osDelegate: OSTableViewDelegate?
     var sections: [OSSection] = []
@@ -28,7 +28,7 @@ class OSTableView: UITableView {
     var PAGINATE_AT = 3
     var DEFAULT_HEADER_HEIGHT: CGFloat = 40.0
     
-    func build(delegate: OSTableViewDelegate) {
+    public func build(delegate: OSTableViewDelegate) {
         self.delegate = self
         self.dataSource = self
         self.osDelegate = delegate
@@ -48,7 +48,7 @@ class OSTableView: UITableView {
         }
     }
     
-    func reloadTableViewWith(data: [OSSection]) {
+    public func reloadTableViewWith(data: [OSSection]) {
         sections = data
         paginating = false
         self.reloadData()
@@ -66,11 +66,11 @@ class OSTableView: UITableView {
 }
 
 extension OSTableView: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sections.count < section ? 0 : sections[section].items.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let element = sections[indexPath.section].items[indexPath.row]
         
         guard let del = osDelegate else { return UITableViewCell() }
@@ -82,11 +82,11 @@ extension OSTableView: UITableViewDelegate, UITableViewDataSource {
         return del.configCell(with: element, for: indexPath)
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
+    public func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    public func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if sections.count > section {
             if let header = sections[section].headerView {
                 return header
@@ -97,7 +97,7 @@ extension OSTableView: UITableViewDelegate, UITableViewDataSource {
         return nil
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         if sections.count > section {
             if sections[section].headerView == nil, sections[section].headerTitle == nil {
                 return 0
@@ -110,16 +110,15 @@ extension OSTableView: UITableViewDelegate, UITableViewDataSource {
         return 0
     }
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         let lastSectionIndex = tableView.numberOfSections - 1
         let lastRowIndex = tableView.numberOfRows(inSection: lastSectionIndex) - 1
         if indexPath.section ==  lastSectionIndex && indexPath.row == lastRowIndex, paginating {
-            // print("this is the last cell")
             let spinner = UIActivityIndicatorView(activityIndicatorStyle: .gray)
             spinner.startAnimating()
             spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
             
-            self.tableFooterView = spinner
+//            self.tableFooterView = spinner
             self.tableFooterView?.isHidden = false
         }
     }
@@ -128,7 +127,7 @@ extension OSTableView: UITableViewDelegate, UITableViewDataSource {
 // Mark: Helpers
 
 extension OSTableView {
-    func simpleHeaderWith(text: String) -> UIView {
+    public func simpleHeaderWith(text: String) -> UIView {
         let label = UILabel()
         label.text = text
         label.textAlignment = NSTextAlignment.center
@@ -137,7 +136,7 @@ extension OSTableView {
         return label
     }
     
-    class func buildSectionWith(array: [Any], header: Any?) -> OSSection {
+    public class func buildSectionWith(array: [Any], header: Any?) -> OSSection {
         var section = OSSection()
         
         if let header = header as? UIView {
@@ -150,7 +149,7 @@ extension OSTableView {
         return section
     }
     
-    func canPaginateFor(indexPath: IndexPath) -> Bool {
+    public func canPaginateFor(indexPath: IndexPath) -> Bool {
         if indexPath.section == sections.count - 1, indexPath.row == sections[indexPath.section].items.count - PAGINATE_AT,
             numberOfItems() > lastElementCount, !paginating {
             lastElementCount = numberOfItems()
@@ -161,7 +160,7 @@ extension OSTableView {
         }
     }
     
-    func numberOfItems() -> Int {
+    public func numberOfItems() -> Int {
         return sections.reduce(0) { (accumulation: Int, nextValue: OSSection) -> Int in
             return accumulation + nextValue.items.count
         }
@@ -170,7 +169,7 @@ extension OSTableView {
 
 // Mark: Models
 
-struct OSSection {
+public struct OSSection {
     var headerTitle: String?
     var headerView: UIView?
     var items: [Any]

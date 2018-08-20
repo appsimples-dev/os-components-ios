@@ -11,27 +11,27 @@ import UIKit
 
 extension UIColor {
     
-    class func fromRGBA(r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) -> UIColor {
+    public class func fromRGBA(r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) -> UIColor {
         return UIColor(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: a)
     }
     
-    class func primary() -> UIColor {
+    public class func primary() -> UIColor {
         return UIColor.fromRGBA(r: 10, g: 218, b: 186, a: 1)
     }
     
-    class func primaryDark() -> UIColor {
+    public class func primaryDark() -> UIColor {
         return UIColor.fromRGBA(r: 39, g: 0, b: 93, a: 1)
     }
     
-    class func accent() -> UIColor {
+    public class func accent() -> UIColor {
         return UIColor.fromRGBA(r: 39, g: 0, b: 93, a: 1)
     }
     
-    class func blackTransparent() -> UIColor {
+    public class func blackTransparent() -> UIColor {
         return UIColor.fromRGBA(r: 0, g: 0, b: 0, a: 0.6)
     }
     
-    class func whiteTransparent() -> UIColor {
+    public class func whiteTransparent() -> UIColor {
         return UIColor.fromRGBA(r: 255, g: 255, b: 255, a: 0.6)
     }
 }

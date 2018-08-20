@@ -9,12 +9,12 @@
 import Foundation
 import UIKit
 
-protocol OSCellInfoDelegate: class {
+public protocol OSCellInfoDelegate: class {
     func moreButtonClick()
     func titleClick()
 }
 
-class OSCellInfo: UIView {
+public class OSCellInfo: UIView {
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var primaryLabel: UILabel!
@@ -29,18 +29,19 @@ class OSCellInfo: UIView {
         commonInit()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
     }
     
     func commonInit() {
-        Bundle.main.loadNibNamed("OSCellInfo", owner: self, options: nil)
+        let podBundle = Bundle(for: self.classForCoder)
+        podBundle.loadNibNamed("OSCellInfo", owner: self, options: nil)
         addSubview(contentView)
         setupFrames()
     }
     
-    func config(primaryColor: UIColor?, secondaryColor: UIColor?, selectable: Bool?, delegate: OSCellInfoDelegate, showButton: Bool) {
+    public func config(primaryColor: UIColor?, secondaryColor: UIColor?, selectable: Bool?, delegate: OSCellInfoDelegate, showButton: Bool) {
         primaryLabel.textColor = primaryColor
         primaryLabel.isUserInteractionEnabled = selectable ?? true
         
@@ -53,14 +54,17 @@ class OSCellInfo: UIView {
         self.delegate = delegate
         moreButton.isHidden = !showButton
         moreButtonImage.isHidden = !showButton
+        
+        let image = UIImage(named: "more_horizontal", in: Bundle(for: self.classForCoder), compatibleWith: nil)
+        moreButtonImage.image = image
     }
     
-    func setPrimaryText(text: String) {
+    public func setPrimaryText(text: String) {
         primaryLabel.isHidden = false
         primaryLabel.text = text
     }
     
-    func setSecondaryText(text: String?) {
+    public func setSecondaryText(text: String?) {
         guard let text = text else {
             secondaryLabel.hide()
             return
@@ -69,7 +73,7 @@ class OSCellInfo: UIView {
         secondaryLabel.text = text
     }
     
-    func setTertiaryText(text: String?) {
+    public func setTertiaryText(text: String?) {
         guard let text = text else {
             tertiaryLabel.hide()
             return

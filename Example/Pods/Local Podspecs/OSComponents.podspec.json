@@ -1,8 +1,8 @@
 {
   "name": "OSComponents",
   "version": "0.1.0",
-  "summary": "A short description of OSComponents.",
-  "description": "TODO: Add long description of the pod here.",
+  "summary": "OSComponents is a collections os components designed to help the apps development",
+  "description": "OSComponents is a collections os components designed to help the apps development",
   "homepage": "https://github.com/MatheusFV/OSComponents",
   "license": {
     "type": "MIT",
@@ -16,7 +16,32 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.2"
   },
-  "source_files": "OSComponents/Classes/**/*"
+  "source_files": "Source/**/*",
+  "resource_bundles": {
+    "OSComponents": [
+      "Source/**/*.xib",
+      "Media.xcassets/**/*.{png,jpg,json}"
+    ]
+  },
+  "resources": "Media.xcassets",
+  "frameworks": [
+    "UIKit",
+    "MapKit"
+  ],
+  "dependencies": {
+    "AlamofireImage": [
+      "~> 3.3"
+    ],
+    "Moya/RxSwift": [
+      "~> 10.0.1"
+    ],
+    "ObjectMapper": [
+      "~> 3.3.0"
+    ],
+    "Reusable": [
+      "~> 4.0.0"
+    ]
+  }
 }

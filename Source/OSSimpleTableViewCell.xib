@@ -12,24 +12,24 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6U6-tz-B5X" customClass="OSSimpleTableViewCell" customModule="baseproject" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="6U6-tz-B5X" customClass="OSSimpleTableViewCell" customModule="OSComponents" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6U6-tz-B5X" id="fD1-fb-tUr">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="63.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ip3-xc-3bU" customClass="OSCellImage" customModule="baseproject" customModuleProvider="target">
+                    <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ip3-xc-3bU" customClass="OSCellImage" customModule="OSComponents" customModuleProvider="target">
                         <rect key="frame" x="16" y="14" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="TFY-Ww-6DA"/>
                             <constraint firstAttribute="width" constant="40" id="gGf-RC-jvp"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="tYX-nM-Yr2" customClass="OSCellInfo" customModule="baseproject" customModuleProvider="target">
+                    <view contentMode="scaleToFill" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="tYX-nM-Yr2" customClass="OSCellInfo" customModule="OSComponents" customModuleProvider="target">
                         <rect key="frame" x="72" y="8" width="122" height="47.5"/>
                     </view>
-                    <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8S9-ar-cXZ" customClass="OSCellButtons" customModule="baseproject" customModuleProvider="target">
+                    <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8S9-ar-cXZ" customClass="OSCellButtons" customModule="OSComponents" customModuleProvider="target">
                         <rect key="frame" x="194" y="16" width="110" height="36"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="36" id="fa9-cQ-fq4"/>

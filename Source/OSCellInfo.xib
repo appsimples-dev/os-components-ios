@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OSCellInfo" customModule="OSComponents" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OSCellInfo" customModule="OSComponents">
             <connections>
                 <outlet property="contentView" destination="v5b-N7-BFa" id="Bkp-4T-zX2"/>
                 <outlet property="moreButton" destination="Idy-Vn-5rq" id="PeR-G1-174"/>
@@ -49,6 +49,13 @@
                             <color key="textColor" red="0.49433290159999999" green="0.49433290159999999" blue="0.49433290159999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <imageView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="more_horizontal" translatesAutoresizingMaskIntoConstraints="NO" id="b0L-ed-sEm">
+                            <rect key="frame" x="410" y="8" width="36" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="22" id="Sc5-Sx-5Ns"/>
+                                <constraint firstAttribute="width" constant="36" id="V1J-Jl-kJQ"/>
+                            </constraints>
+                        </imageView>
                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Idy-Vn-5rq">
                             <rect key="frame" x="410" y="8" width="36" height="22"/>
                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -59,13 +66,6 @@
                                 <action selector="moreButtonClick:" destination="-1" eventType="touchUpInside" id="Hbr-17-m5W"/>
                             </connections>
                         </button>
-                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="more_horizontal" translatesAutoresizingMaskIntoConstraints="NO" id="b0L-ed-sEm">
-                            <rect key="frame" x="410" y="8" width="36" height="22"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="22" id="Sc5-Sx-5Ns"/>
-                                <constraint firstAttribute="width" constant="36" id="V1J-Jl-kJQ"/>
-                            </constraints>
-                        </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckd-s4-Pab">
                             <rect key="frame" x="0.0" y="8" width="410" height="20"/>
                             <connections>

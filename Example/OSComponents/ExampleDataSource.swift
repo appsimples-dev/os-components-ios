@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import OSComponents
 
 class ExampleDataSource {
     var exampleItemsArray = [OSSection]()

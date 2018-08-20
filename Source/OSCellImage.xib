@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OSCellImage" customModule="OSComponents" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OSCellImage" customModule="OSComponents">
             <connections>
                 <outlet property="contentView" destination="Voz-Ql-fsS" id="qf3-Xe-94K"/>
                 <outlet property="primaryImageView" destination="Rmr-q1-GEe" id="p0x-xr-i2C"/>

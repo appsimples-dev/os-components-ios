@@ -21,20 +21,21 @@ Pod::Spec.new do |s|
 OSComponents is a collections os components designed to help the apps development
                        DESC
 
-  s.homepage         = 'https://github.com/MatheusFV/OSComponents'
+  s.homepage         = 'https://github.com/appsimples/os-components-ios'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'MatheusFV' => 'matheus.venosa@usp.br' }
-  s.source           = { :git => 'https://github.com/MatheusFV/OSComponents.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/appsimples/os-components-ios.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.2'
 
-  s.source_files = 'OSComponents/Components/**/*'
+  s.source_files = 'Source/**/*'
   
   s.resource_bundles = {
-    'OSComponents' => ['OSComponents/Assets/*.png']
+      'OSComponents' => ['Source/**/*.xib', 'Media.xcassets/**/*.{png,jpg,json}']
   }
+  s.resources = 'Media.xcassets'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit', 'MapKit'

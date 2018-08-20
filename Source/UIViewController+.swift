@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 extension UIViewController {
-    func presentAlertSheetWith(title: String, description: String, actions: [UIAlertAction]) {
+    public func presentAlertSheetWith(title: String, description: String, actions: [UIAlertAction]) {
         let alertController = UIAlertController(title: title, message: description, preferredStyle: .actionSheet)
         actions.forEach { (action) in
             alertController.addAction(action)

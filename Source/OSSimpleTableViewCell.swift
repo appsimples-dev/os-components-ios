@@ -10,7 +10,7 @@ import UIKit
 import Reusable
 import ObjectMapper
 
-protocol OSSimpleTableViewCellDelegate: class {
+public protocol OSSimpleTableViewCellDelegate: class {
     func singleButtonClickFor(indexPath: IndexPath?)
     func leftButtonClickFor(indexPath: IndexPath?)
     func rightButtonClickFor(indexPath: IndexPath?)
@@ -19,7 +19,7 @@ protocol OSSimpleTableViewCellDelegate: class {
     func imageClickFor(indexPath: IndexPath?)
 }
 
-class OSSimpleTableViewCell: UITableViewCell, NibReusable {
+public class OSSimpleTableViewCell: UITableViewCell, NibReusable {
     
     @IBOutlet weak var cellImage: OSCellImage!
     @IBOutlet weak var cellInfo: OSCellInfo!
@@ -29,13 +29,13 @@ class OSSimpleTableViewCell: UITableViewCell, NibReusable {
     weak var delegate: OSSimpleTableViewCellDelegate?
     var indexPath: IndexPath?
     
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
         // Initialization code
     }
     
-    func configWith(cellConfiguration: OSSimpleCellConfiguration, cellData: OSSimpleCellData, delegate: OSSimpleTableViewCellDelegate?, indexPath: IndexPath) {
+    public func configWith(cellConfiguration: OSSimpleCellConfiguration, cellData: OSSimpleCellData, delegate: OSSimpleTableViewCellDelegate?, indexPath: IndexPath) {
         configImage(configuration: cellConfiguration, data: cellData)
         configInfo(configuration: cellConfiguration, data: cellData)
         configButtons(configuration: cellConfiguration, data: cellData)
@@ -75,7 +75,7 @@ class OSSimpleTableViewCell: UITableViewCell, NibReusable {
         cellButtons.configWith(delegate: self, data: btnData, type: configuration.buttonsType)
     }
     
-    override func prepareForReuse() {
+    public override func prepareForReuse() {
         buttonWidth.constant = 110.0
         buttonHeight.constant = 36.0
         cellButtons.isHidden = false
@@ -83,73 +83,76 @@ class OSSimpleTableViewCell: UITableViewCell, NibReusable {
 }
 
 extension OSSimpleTableViewCell: OSCellButtonsDelegate {
-    func onClick() {
+    public func onClick() {
         delegate?.singleButtonClickFor(indexPath: indexPath)
     }
     
-    func onLeftClick() {
+    public func onLeftClick() {
         delegate?.leftButtonClickFor(indexPath: indexPath)
     }
     
-    func onRightClick() {
+    public func onRightClick() {
         delegate?.rightButtonClickFor(indexPath: indexPath)
     }
 }
 
 extension OSSimpleTableViewCell: OSCellInfoDelegate {
-    func titleClick() {
+   public  func titleClick() {
         delegate?.titleClickFor(indexPath: indexPath)
     }
     
-    func moreButtonClick() {
+    public func moreButtonClick() {
         delegate?.moreButtonClickFor(indexPath: indexPath)
     }
 }
 
 extension OSSimpleTableViewCell: OSCellImageDelegate {
-    func imageClick() {
+    public func imageClick() {
         delegate?.imageClickFor(indexPath: indexPath)
     }
 }
 
 // MARK: models
 
-struct OSSimpleCellConfiguration {
-    var primaryImagePlaceholder: UIImage?
-    var secondaryImagePlaceholder: UIImage?
-    var primaryTextColor: UIColor?
-    var secondaryTextColor: UIColor?
-    var tertiaryTextColor: UIColor?
-    var textSelectable: Bool?
-    var buttonColor: UIColor?
-    var leftButtonColor: UIColor?
-    var rightButtonColor: UIColor?
-    var buttonText: String?
-    var leftButtonIcon: UIImage?
-    var rightButtonIcon: UIImage?
-    var buttonsType: OSCellButtonsTypes = OSCellButtonsTypes.single
-    var selectedButtonColor: UIColor?
-    var selectedButtonTextColor: UIColor?
-    var selectedButtonText: String?
-    var selected: Bool = false
-    var moreButton: Bool = false
+public struct OSSimpleCellConfiguration {
+    public var primaryImagePlaceholder: UIImage?
+    public var secondaryImagePlaceholder: UIImage?
+    public var primaryTextColor: UIColor?
+    public var secondaryTextColor: UIColor?
+    public var tertiaryTextColor: UIColor?
+    public var textSelectable: Bool?
+    public var buttonColor: UIColor?
+    public var leftButtonColor: UIColor?
+    public var rightButtonColor: UIColor?
+    public var buttonText: String?
+    public var leftButtonIcon: UIImage?
+    public var rightButtonIcon: UIImage?
+    public var buttonsType: OSCellButtonsTypes = OSCellButtonsTypes.single
+    public var selectedButtonColor: UIColor?
+    public var selectedButtonTextColor: UIColor?
+    public var selectedButtonText: String?
+    public var selected: Bool = false
+    public var moreButton: Bool = false
+    
+    public init(){
+    }
 }
 
-struct OSSimpleCellData: Mappable {
-    var primaryImage: String?
-    var secondaryImage: String?
-    var primaryText: String = ""
-    var secondaryText: String?
-    var tertiaryText: String?
-    var selected: Bool?
+public struct OSSimpleCellData: Mappable {
+    public var primaryImage: String?
+    public var secondaryImage: String?
+    public var primaryText: String = ""
+    public var secondaryText: String?
+    public var tertiaryText: String?
+    public var selected: Bool?
     
-    init() {
+    public init() {
     }
     
-    init?(map: Map) {
+    public init?(map: Map) {
     }
     
-    mutating func mapping(map: Map) {
+    public mutating func mapping(map: Map) {
         primaryImage <- map["primaryImage"]
         secondaryImage <- map["secondaryImage"]
         primaryText <- map["primaryText"]

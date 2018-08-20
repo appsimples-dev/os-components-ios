@@ -10,6 +10,6 @@ target 'OSComponents_Example' do
   target 'OSComponents_Tests' do
     inherit! :search_paths
 
-    
+
   end
 end
