@@ -16,6 +16,15 @@ public protocol OSTableViewDelegate: class {
     func paginate()
 }
 
+extension OSTableViewDelegate {
+    func swipeRefresh() {
+        print("Default swipe refresh implementation, override it with your own")
+    }
+    func paginate() {
+        print("Default paginate implementation, override it with your own")
+    }
+}
+
 public class OSTableView: UITableView {
     
     weak var osDelegate: OSTableViewDelegate?

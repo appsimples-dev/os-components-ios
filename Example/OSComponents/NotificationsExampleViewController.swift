@@ -37,10 +37,10 @@ class NotificationsExampleViewController: UIViewController {
     func setupTableView() {
         tableView.build(delegate: self)
         tableView.register(cellType: OSSimpleTableViewCell.self)
-        let notif = NotificationModel(image: "https://abrilveja.files.wordpress.com/2017/05/obama-berlim-02.jpg", title: "Presidente Obama", subtitle: "200", isFollowing: true, type: NotificationType.follow)
-        let notif2 = NotificationModel(image: "https://abrilveja.files.wordpress.com/2017/05/obama-berlim-02.jpg", title: "Presidente Obama", subtitle: "200", isFollowing: false, type: NotificationType.follow)
+        let notif = NotificationModel(image: "https://abrilveja.files.wordpress.com/2017/05/obama-berlim-02.jpg", title: "Presidente Obama", subtitle: "200 itens", isFollowing: true, type: NotificationType.follow)
+        let notif2 = NotificationModel(image: "https://abrilveja.files.wordpress.com/2017/05/obama-berlim-02.jpg", title: "Presidente Obama", subtitle: nil, isFollowing: false, type: NotificationType.follow)
         let notif3 = NotificationModel(image: "https://abrilveja.files.wordpress.com/2017/05/obama-berlim-02.jpg", title: "Presidente Obama", subtitle: "Quer ser seu amigo", isFollowing: nil, type: NotificationType.add)
-        let notif4 = NotificationModel(image: "https://abrilveja.files.wordpress.com/2017/05/obama-berlim-02.jpg", title: "Presidente Obama", subtitle: "Te enviou um pedido de troca", isFollowing: nil, type: NotificationType.text)
+        let notif4 = NotificationModel(image: "https://abrilveja.files.wordpress.com/2017/05/obama-berlim-02.jpg", title: "", subtitle: "Nome do usuário mais 1 pessoa comentou no seu item Nome do item", isFollowing: nil, type: NotificationType.text)
         list.append(OSTableView.buildSectionWith(array: [notif, notif2, notif3, notif4, notif, notif2, notif3, notif, notif2, notif3, notif4, notif, notif2, notif3, notif, notif2, notif3, notif4, notif, notif2, notif3, notif, notif2, notif3, notif4, notif, notif2, notif3], header: nil))
         tableView.reloadTableViewWith(data: list)
     }

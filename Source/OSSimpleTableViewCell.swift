@@ -19,6 +19,14 @@ public protocol OSSimpleTableViewCellDelegate: class {
     func imageClickFor(indexPath: IndexPath?)
 }
 
+extension OSSimpleTableViewCellDelegate {
+    func singleButtonClickFor(indexPath: IndexPath?) {}
+    func leftButtonClickFor(indexPath: IndexPath?) {}
+    func rightButtonClickFor(indexPath: IndexPath?) {}
+    func moreButtonClickFor(indexPath: IndexPath?) {}
+    func imageClickFor(indexPath: IndexPath?) {}
+}
+
 public class OSSimpleTableViewCell: UITableViewCell, NibReusable {
     
     @IBOutlet weak var cellImage: OSCellImage!

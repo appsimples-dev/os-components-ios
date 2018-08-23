@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'OSComponents'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'OSComponents is a collections os components designed to help the apps development'
 
 # This description is used to generate tags and improve search results.
@@ -26,7 +26,7 @@ OSComponents is a collections os components designed to help the apps developmen
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'MatheusFV' => 'matheus.venosa@usp.br' }
   s.source           = { :git => 'https://github.com/appsimples/os-components-ios.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://www.appsimples.com.br'
 
   s.ios.deployment_target = '9.2'
 

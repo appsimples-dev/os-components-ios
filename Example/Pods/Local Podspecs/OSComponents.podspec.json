@@ -1,9 +1,9 @@
 {
   "name": "OSComponents",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "summary": "OSComponents is a collections os components designed to help the apps development",
   "description": "OSComponents is a collections os components designed to help the apps development",
-  "homepage": "https://github.com/MatheusFV/OSComponents",
+  "homepage": "https://github.com/appsimples/os-components-ios",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "MatheusFV": "matheus.venosa@usp.br"
   },
   "source": {
-    "git": "https://github.com/MatheusFV/OSComponents.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/appsimples/os-components-ios.git",
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "9.2"

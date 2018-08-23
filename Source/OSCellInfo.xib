@@ -28,7 +28,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTf-rz-j3Y">
                     <rect key="frame" x="0.0" y="0.0" width="446" height="87"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ec-CK-1Ok">
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ec-CK-1Ok">
                             <rect key="frame" x="0.0" y="8" width="410" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="AJG-fm-nnU"/>

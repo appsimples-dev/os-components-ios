@@ -14,7 +14,6 @@ class SimpleCellConfiguration {
     class func configNotificationCell() -> OSSimpleCellConfiguration {
         var cellConfiguration = OSSimpleCellConfiguration()
         cellConfiguration.primaryTextColor = UIColor.black
-        cellConfiguration.secondaryTextColor = UIColor.gray
         cellConfiguration.buttonsType = OSCellButtonsTypes.none
         return cellConfiguration
     }

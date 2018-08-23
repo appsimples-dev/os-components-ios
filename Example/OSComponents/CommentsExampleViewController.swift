@@ -35,10 +35,12 @@ class CommentsExampleViewController: UIViewController {
 }
 
 extension CommentsExampleViewController: OSTableViewDelegate {
-    func paginate() {
+    func swipeRefresh() {
+        
     }
     
-    func swipeRefresh() {
+    func paginate() {
+        
     }
     
     func configCell(with model: Any, for indexPath: IndexPath) -> UITableViewCell {
