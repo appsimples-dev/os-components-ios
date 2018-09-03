@@ -31,6 +31,7 @@ public class OSTableView: UITableView {
     var sections: [OSSection] = []
     var lastElementCount: Int = 0
     var paginating: Bool = false
+    public var canPaginate: Bool = false // Set this variable to enable pagination
     
     // MARK: CONSTANTS
     // CHANGE THIS CONSTANT TO CHANGE THE MOMENT OF PAGINATION
@@ -43,15 +44,25 @@ public class OSTableView: UITableView {
         self.osDelegate = delegate
         self.rowHeight = UITableViewAutomaticDimension
         self.separatorStyle = .none
+    }
+    
+    public func useRefresh() {
         if #available(iOS 10.0, *) {
             self.refreshControl = UIRefreshControl()
-        } else {
-            // Fallback on earlier versions
-        }
-        if #available(iOS 10.0, *) {
             refreshControl?.addTarget(self, action:
                 #selector(handleRefresh(_:)),
                                       for: UIControlEvents.valueChanged)
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+    
+    public func reloadTableViewWith(data: OSSection) {
+        sections = [data]
+        paginating = false
+        self.reloadData()
+        if #available(iOS 10.0, *) {
+            refreshControl?.endRefreshing()
         } else {
             // Fallback on earlier versions
         }
@@ -159,10 +170,11 @@ extension OSTableView {
     }
     
     public func canPaginateFor(indexPath: IndexPath) -> Bool {
+        if (!canPaginate) { return false }
         if indexPath.section == sections.count - 1, indexPath.row == sections[indexPath.section].items.count - PAGINATE_AT,
             numberOfItems() > lastElementCount, !paginating {
             lastElementCount = numberOfItems()
-            paginating = true
+            paginating = canPaginate
             return true
         } else {
             return false

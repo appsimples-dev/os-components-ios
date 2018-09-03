@@ -31,6 +31,8 @@ class OSTableViewControllerExample: UIViewController {
         tableView.build(delegate: self)
         tableView.register(cellType: ExampleTableViewCell.self)
         tableView.reloadTableViewWith(data: dataSource?.getItems() ?? [])
+        tableView.useRefresh()
+        tableView.canPaginate = true
     }
 }
 
