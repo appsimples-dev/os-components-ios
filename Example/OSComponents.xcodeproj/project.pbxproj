@@ -29,6 +29,8 @@
 		918EAF522126FD2C0095C381 /* ComponentsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 918EAF4E2126FD2C0095C381 /* ComponentsListViewController.swift */; };
 		918EAF532126FD2C0095C381 /* ComponentsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 918EAF4F2126FD2C0095C381 /* ComponentsListViewController.xib */; };
 		D1BD64629C07EFEBD33C92FC /* Pods_OSComponents_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91871F9AAFC20E6FF2948B45 /* Pods_OSComponents_Tests.framework */; };
+		FC933E4421372ACB007B1678 /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC933E4221372ACB007B1678 /* PostsViewController.swift */; };
+		FC933E4521372ACB007B1678 /* PostsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC933E4321372ACB007B1678 /* PostsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		B08254705E6A92E0BB8FB3B0 /* Pods-OSComponents_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSComponents_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OSComponents_Tests/Pods-OSComponents_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4436255F64970C88629B682 /* Pods-OSComponents_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSComponents_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-OSComponents_Example/Pods-OSComponents_Example.release.xcconfig"; sourceTree = "<group>"; };
 		F7F0C2181C44733F4CEB2B5B /* Pods-OSComponents_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OSComponents_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OSComponents_Tests/Pods-OSComponents_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		FC933E4221372ACB007B1678 /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
+		FC933E4321372ACB007B1678 /* PostsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +190,7 @@
 		918EAEF42126FA2F0095C381 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FC933E4121372AB2007B1678 /* Posts */,
 				918EAF0D2126FAC20095C381 /* SimpleCell */,
 				918EAF022126FA6F0095C381 /* TableView */,
 				918EAEFD2126FA570095C381 /* ComponentsList */,
@@ -255,6 +260,15 @@
 				F7F0C2181C44733F4CEB2B5B /* Pods-OSComponents_Tests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FC933E4121372AB2007B1678 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				FC933E4221372ACB007B1678 /* PostsViewController.swift */,
+				FC933E4321372ACB007B1678 /* PostsViewController.xib */,
+			);
+			name = Posts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC933E4521372ACB007B1678 /* PostsViewController.xib in Resources */,
 				918EAF532126FD2C0095C381 /* ComponentsListViewController.xib in Resources */,
 				918EAF4B2126FD210095C381 /* ExampleTableViewCell.xib in Resources */,
 				918EAF512126FD2C0095C381 /* ComponentsListCell.xib in Resources */,
@@ -445,6 +460,7 @@
 				918EAF502126FD2C0095C381 /* ComponentsListCell.swift in Sources */,
 				918EAF352126FCF60095C381 /* SimpleCellConfiguration.swift in Sources */,
 				918EAF3A2126FCFF0095C381 /* NotificationsExampleViewController.swift in Sources */,
+				FC933E4421372ACB007B1678 /* PostsViewController.swift in Sources */,
 				918EAF482126FD210095C381 /* OSTableViewControllerExample.swift in Sources */,
 				918EAF412126FD080095C381 /* CommentsExampleViewController.swift in Sources */,
 				918EAF402126FD080095C381 /* CommentModel.swift in Sources */,

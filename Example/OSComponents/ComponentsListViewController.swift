@@ -18,6 +18,7 @@ class ComponentsListViewController: UIViewController {
         components.append(ComponentListCellModel(viewController: OSTableViewControllerExample(nibName: "OSTableViewControllerExample", bundle: nil)))
         components.append(ComponentListCellModel(viewController: NotificationsExampleViewController(nibName: "NotificationsExampleViewController", bundle: nil)))
         components.append(ComponentListCellModel(viewController: CommentsExampleViewController(nibName: "CommentsExampleViewController", bundle: nil)))
+        components.append(ComponentListCellModel(viewController: PostsViewController(nibName: "PostsViewController", bundle: nil)))
         setupTableView()
         // Do any additional setup after loading the view.
     }

@@ -41,6 +41,7 @@ public class OSTableView: UITableView {
         self.delegate = self
         self.dataSource = self
         self.osDelegate = delegate
+        self.clipsToBounds = true
         self.rowHeight = UITableViewAutomaticDimension
         self.separatorStyle = .none
         if #available(iOS 10.0, *) {
