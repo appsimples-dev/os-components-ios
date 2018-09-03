@@ -22,14 +22,14 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d7s-OW-iEv" customClass="OSTableView" customModule="OSComponents">
-                    <rect key="frame" x="16" y="20" width="343" height="647"/>
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="d7s-OW-iEv" secondAttribute="trailing" constant="16" id="214-lF-19K"/>
-                <constraint firstItem="d7s-OW-iEv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="W8l-jX-vvp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="d7s-OW-iEv" secondAttribute="trailing" id="214-lF-19K"/>
+                <constraint firstItem="d7s-OW-iEv" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="W8l-jX-vvp"/>
                 <constraint firstItem="d7s-OW-iEv" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="hhW-r5-xYN"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="d7s-OW-iEv" secondAttribute="bottom" id="wE9-nG-sRU"/>
             </constraints>
