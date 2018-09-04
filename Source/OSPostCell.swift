@@ -11,12 +11,18 @@ import Reusable
 public class OSPostCell: UITableViewCell, NibReusable {
     @IBOutlet weak var header: OSPostHeader!
     @IBOutlet weak var body: OSPostBody!
+    @IBOutlet weak var container: UIView!
     
     override public func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
         configBody()
         configHeader()
+        container.layer.backgroundColor = UIColor.white.cgColor
+        container.layer.shadowColor = UIColor.black.cgColor
+        container.layer.shadowOffset = CGSize(width: 0, height: 1.0)
+        container.layer.shadowOpacity = 0.2
+        container.layer.shadowRadius = 4.0
         // Initialization code
     }
 

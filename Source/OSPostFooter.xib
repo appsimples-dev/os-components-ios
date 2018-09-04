@@ -13,18 +13,71 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OSPostFooter" customModule="OSComponents" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="tVu-H6-aIl"/>
+                <outlet property="item1" destination="Btc-lL-xSx" id="XEM-Nw-G9P"/>
+                <outlet property="item2" destination="dor-FY-MC7" id="Ft2-tc-Smk"/>
+                <outlet property="item3" destination="dGt-fg-Leb" id="1VZ-f3-fFZ"/>
+                <outlet property="item4" destination="4Mg-kU-Umm" id="8sD-vQ-fyD"/>
+                <outlet property="item5" destination="06n-t4-jUz" id="0Ga-gE-MDf"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="34"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="0.93030295809999997" blue="0.62100473850000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="knH-4h-aj0">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="34"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Btc-lL-xSx" customClass="OSInfoButton" customModule="OSComponents" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="103" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="68" id="e9Z-tI-3ZD"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dor-FY-MC7" customClass="OSInfoButton" customModule="OSComponents" customModuleProvider="target">
+                            <rect key="frame" x="107" y="0.0" width="68" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="68" id="b64-6z-gnh"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dGt-fg-Leb" customClass="OSInfoButton" customModule="OSComponents" customModuleProvider="target">
+                            <rect key="frame" x="179" y="0.0" width="68" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="68" id="mpY-yy-C7w"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x6B-dt-R7r">
+                            <rect key="frame" x="251" y="0.0" width="48" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" id="0VW-YA-Izd"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Mg-kU-Umm" customClass="OSInfoButton" customModule="OSComponents" customModuleProvider="target">
+                            <rect key="frame" x="303" y="0.0" width="0.0" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="68" id="fpa-qd-8mK"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="06n-t4-jUz" customClass="OSInfoButton" customModule="OSComponents" customModuleProvider="target">
+                            <rect key="frame" x="307" y="0.0" width="68" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="68" id="7Mu-MR-tST"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="knH-4h-aj0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="0Cl-aK-7VA"/>
+                <constraint firstAttribute="bottom" secondItem="knH-4h-aj0" secondAttribute="bottom" id="IR8-Mn-iDv"/>
+                <constraint firstItem="knH-4h-aj0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="KX2-e0-5FH"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="knH-4h-aj0" secondAttribute="trailing" id="btj-M7-4Hb"/>
+            </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="126.5" y="-186"/>
+            <point key="canvasLocation" x="126.5" y="-187"/>
         </view>
     </objects>
 </document>
