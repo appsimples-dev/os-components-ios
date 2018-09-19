@@ -26,13 +26,16 @@ public class OSPostFooter: UIView {
     }
     
     private func config() {
-        let image = UIImage(named: "more_horizontal", in: Bundle(for: self.classForCoder), compatibleWith: nil)
-        let data = OSInfoButtonData(image: image, selectedImage:image, text: "120", selected: false)
-        item1.configWith(data: data, textColor: UIColor.gray, bold: false)
-        item2.configWith(data: OSInfoButtonData(image: image, selectedImage: image, text: "1K", selected: false), textColor: UIColor.gray, bold: false)
-        item3.configWith(data: OSInfoButtonData(image: image, selectedImage: image, text: "10K", selected: false), textColor: UIColor.gray, bold: false)
+        let like = UIImage(named: "like", in: Bundle(for: self.classForCoder), compatibleWith: nil)
+        let share = UIImage(named: "share", in: Bundle(for: self.classForCoder), compatibleWith: nil)
+        let comment = UIImage(named: "comment", in: Bundle(for: self.classForCoder), compatibleWith: nil)
+        let off = UIImage(named: "off", in: Bundle(for: self.classForCoder), compatibleWith: nil)
+
+        item1.configWith(data: OSInfoButtonData(image: like, selectedImage: like, text: "150", selected: false), textColor: UIColor.gray, bold: false)
+        item2.configWith(data: OSInfoButtonData(image: comment, selectedImage: comment, text: "125", selected: false), textColor: UIColor.gray, bold: false)
+        item3.configWith(data: OSInfoButtonData(image: off, selectedImage: off, text: nil, selected: false), textColor: UIColor.gray, bold: false)
         item4.configWith(data: OSInfoButtonData(image: nil, selectedImage: nil, text: "novo!", selected: false), textColor: UIColor.black, bold: true)
-        item5.configWith(data: OSInfoButtonData(image: image, selectedImage: image, text: nil, selected: false), textColor: UIColor.gray, bold: false)
+        item5.configWith(data: OSInfoButtonData(image: share, selectedImage: share, text: nil, selected: false), textColor: UIColor.gray, bold: false)
     }
 
     func commonInit() {

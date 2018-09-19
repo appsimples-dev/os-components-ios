@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -24,24 +24,20 @@
                         <subviews>
                             <view contentMode="scaleToFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AHo-Mr-djf" customClass="OSPostHeader" customModule="OSComponents" customModuleProvider="target">
                                 <rect key="frame" x="8" y="14" width="288" height="67"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="tWB-Zn-8dn"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O9M-Ar-PLo" customClass="OSPostBody" customModule="OSComponents" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="89" width="304" height="109.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tdr-gy-CqG" customClass="OSPostFooter" customModule="OSComponents" customModuleProvider="target">
                                 <rect key="frame" x="8" y="206.5" width="288" height="51"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="dMX-9X-y9p"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="AHo-Mr-djf" firstAttribute="top" secondItem="j58-xL-GlU" secondAttribute="top" constant="14" id="5h0-Gc-WCP"/>
                             <constraint firstAttribute="trailing" secondItem="O9M-Ar-PLo" secondAttribute="trailing" id="7Pn-Kb-CmC"/>

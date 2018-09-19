@@ -26,10 +26,10 @@ public class OSPostHeader: UIView {
         if let url = URL(string: data.imageUrl ?? "") {
             postHeaderImage.af_setImage(withURL: url)
         }
-        postHeaderInfo.config(primaryColor: configuration.primaryTextColor, secondaryColor: configuration.secondaryTextColor, selectable: true, delegate: self, showButton: data.buttonEnabled)
         postHeaderInfo.setPrimaryText(text: data.primaryText)
         postHeaderInfo.setSecondaryText(text: data.secondaryText)
-//        postHeaderInfo.setTertiaryText(text: data.tertiaryText)
+        postHeaderInfo.setTertiaryText(text: data.tertiaryText)
+        postHeaderInfo.config(primaryColor: configuration.primaryTextColor, secondaryColor: configuration.secondaryTextColor, selectable: true, delegate: self, showButton: data.buttonEnabled)
         contentView.layoutIfNeeded()
     }
     
@@ -41,8 +41,6 @@ public class OSPostHeader: UIView {
     }
     
     private func setupFrames() {
-//        contentView.frame.size.height = 0
-//        contentView.frame.size.width = 0
         postHeaderImage.circularCorners()
         contentView.layoutIfNeeded() // UPDATE ALL THE SUBVIEWS LAYOUT
     }

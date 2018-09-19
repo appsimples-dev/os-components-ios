@@ -59,6 +59,8 @@ public class OSInfoButton: UIView {
         } else {
             self.label.hide()
         }
+        
+        contentView.layoutIfNeeded()
     }
     
     private func defaultTextLayout() {
