@@ -109,7 +109,7 @@ public class OSCellButtons: UIView {
         if click { selected = !selected }
         centerButton.backgroundColor = selected ? buttonsData?.selectedColor : UIColor.clear
         centerButton.setTitleColor(selected ? buttonsData?.selectedTextColor : buttonsData?.color, for: .normal)
-        centerButton.setTitle(selected ? buttonsData?.selectedText?.uppercased() : buttonsData?.text?.uppercased(), for: .normal)
+        centerButton.setTitle(selected ? buttonsData?.selectedText : buttonsData?.text, for: .normal)
         buttonsData?.selected = selected
     }
     
