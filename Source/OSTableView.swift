@@ -71,6 +71,7 @@ public class OSTableView: UITableView {
     public func reloadTableViewWith(data: [OSSection]) {
         sections = data
         paginating = false
+        tableFooterView?.isHidden = true
         self.reloadData()
         if #available(iOS 10.0, *) {
             refreshControl?.endRefreshing()
@@ -81,6 +82,7 @@ public class OSTableView: UITableView {
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
         osDelegate?.swipeRefresh()
+        lastElementCount = 0
     }
     
 }
@@ -138,7 +140,7 @@ extension OSTableView: UITableViewDelegate, UITableViewDataSource {
             spinner.startAnimating()
             spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
             
-//            self.tableFooterView = spinner
+            self.tableFooterView = spinner
             self.tableFooterView?.isHidden = false
         }
     }
