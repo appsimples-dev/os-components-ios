@@ -35,7 +35,7 @@ public class OSTableView: UITableView {
     
     // MARK: CONSTANTS
     // CHANGE THIS CONSTANT TO CHANGE THE MOMENT OF PAGINATION
-    var PAGINATE_AT = 3
+    var PAGINATE_AT = 1
     var DEFAULT_HEADER_HEIGHT: CGFloat = 40.0
     
     public func build(delegate: OSTableViewDelegate) {
@@ -60,6 +60,16 @@ public class OSTableView: UITableView {
     public func reloadTableViewWith(data: OSSection) {
         sections = [data]
         paginating = false
+        self.reloadData()
+        if #available(iOS 10.0, *) {
+            refreshControl?.endRefreshing()
+        } else {
+            // Fallback on earlier versions
+        }
+    }
+    
+    public func reloadTableViewWithoutPagination(data: OSSection) {
+        sections = [data]
         self.reloadData()
         if #available(iOS 10.0, *) {
             refreshControl?.endRefreshing()
@@ -141,7 +151,7 @@ extension OSTableView: UITableViewDelegate, UITableViewDataSource {
             spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
             
             self.tableFooterView = spinner
-            self.tableFooterView?.isHidden = false
+//            self.tableFooterView?.isHidden = false
         }
     }
 }
