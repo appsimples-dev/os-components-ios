@@ -52,6 +52,10 @@ public class OSSimpleTableViewCell: UITableViewCell, NibReusable {
         self.layoutIfNeeded()
     }
     
+    public func setHeaderButtonImage(_ image: UIImage) {
+        cellInfo.setButtonImage(image)
+    }
+    
     private func configImage(configuration: OSSimpleCellConfiguration, data: OSSimpleCellData) {
         cellImage.setPrimaryImage(imageUrl: data.primaryImage, placeholder: configuration.primaryImagePlaceholder, delegate: self)
         cellImage.setSecondaryImage(imageUrl: data.secondaryImage, placeholder: configuration.secondaryImagePlaceholder)

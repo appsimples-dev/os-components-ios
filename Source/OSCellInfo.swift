@@ -55,7 +55,7 @@ public class OSCellInfo: UIView {
         moreButton.isHidden = !showButton
         moreButtonImage.isHidden = !showButton
         
-        let image = UIImage(named: "more_horizontal", in: Bundle(for: self.classForCoder), compatibleWith: nil)
+        let image = UIImage(named: "more", in: Bundle(for: self.classForCoder), compatibleWith: nil)
         moreButtonImage.image = image
     }
     
@@ -86,6 +86,10 @@ public class OSCellInfo: UIView {
         primaryLabel.isHidden = true
         secondaryLabel.isHidden = true
         tertiaryLabel.isHidden = true
+    }
+    
+    public func setButtonImage(_ image: UIImage) {
+        moreButton.setImage(image, for: .normal)
     }
     
     private func setupFrames() {
