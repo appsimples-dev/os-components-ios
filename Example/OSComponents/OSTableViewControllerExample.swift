@@ -9,6 +9,7 @@
 import UIKit
 import OSComponents
 
+
 class OSTableViewControllerExample: UIViewController {
 
     @IBOutlet weak var tableView: OSTableView!
@@ -19,6 +20,7 @@ class OSTableViewControllerExample: UIViewController {
         dataSource = ExampleDataSource()
         dataSource?.createList()
         setupTableView()
+        
         // Do any additional setup after loading the view.
     }
 
@@ -34,6 +36,11 @@ class OSTableViewControllerExample: UIViewController {
         tableView.useRefresh()
         tableView.canPaginate = true
     }
+    
+    @IBAction func go(_ sender: Any) {
+        let vc = ComponentsListViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 
@@ -46,14 +53,11 @@ extension OSTableViewControllerExample: OSTableViewDelegate {
         }
         return UITableViewCell()
     }
-    
-    func swipeRefresh() {
-        print("swipe")
-    }
-    
     // Pagination happens in the last section (Use one section for a simple tableView with pagination)
     func paginate() {
         dataSource?.paginateList()
         tableView.reloadTableViewWith(data: dataSource?.getItems() ?? [])
     }
 }
+
+

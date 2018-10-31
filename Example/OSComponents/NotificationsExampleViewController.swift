@@ -46,7 +46,6 @@ class NotificationsExampleViewController: UIViewController {
     }
 }
 
-
 extension NotificationsExampleViewController: OSTableViewDelegate {
     func configCell(with model: Any, for indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: OSSimpleTableViewCell.self)
@@ -63,15 +62,6 @@ extension NotificationsExampleViewController: OSTableViewDelegate {
             break
         }
         return cell
-    }
-    
-    func swipeRefresh() {
-        print("swipe")
-    }
-    
-    // Pagination happens in the last section (Use one section for a simple tableView with pagination)
-    func paginate() {
-        print("paginate")
     }
 }
 

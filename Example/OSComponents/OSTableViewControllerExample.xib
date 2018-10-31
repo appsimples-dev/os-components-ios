@@ -22,18 +22,30 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rve-aO-xpT" customClass="OSTableView" customModule="OSComponents">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <rect key="frame" x="0.0" y="70" width="375" height="597"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89X-OY-rI2">
+                    <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="go:" destination="-1" eventType="touchUpInside" id="afu-G7-cbk"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="89X-OY-rI2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="5AE-c7-OJP"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rve-aO-xpT" secondAttribute="trailing" id="6s3-6w-zp2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="rve-aO-xpT" secondAttribute="bottom" id="SwK-qY-HlJ"/>
-                <constraint firstItem="rve-aO-xpT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="wDa-od-Cu9"/>
+                <constraint firstItem="rve-aO-xpT" firstAttribute="top" secondItem="89X-OY-rI2" secondAttribute="bottom" id="lPe-FN-PdN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="89X-OY-rI2" secondAttribute="trailing" id="qFX-IH-Fpr"/>
+                <constraint firstItem="89X-OY-rI2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tKj-BN-RDh"/>
+                <constraint firstItem="rve-aO-xpT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="wDa-od-Cu9"/>
                 <constraint firstItem="rve-aO-xpT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="zlt-Dk-EMX"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
 </document>

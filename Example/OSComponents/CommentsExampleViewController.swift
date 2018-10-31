@@ -35,14 +35,6 @@ class CommentsExampleViewController: UIViewController {
 }
 
 extension CommentsExampleViewController: OSTableViewDelegate {
-    func swipeRefresh() {
-        
-    }
-    
-    func paginate() {
-        
-    }
-    
     func configCell(with model: Any, for indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(for: indexPath, cellType: OSSimpleTableViewCell.self)
         guard let comment = model as? CommentModel else { return UITableViewCell() }
