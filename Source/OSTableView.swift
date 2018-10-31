@@ -10,23 +10,13 @@ import Foundation
 import UIKit
 import Reusable
 
-public protocol OSTableViewDelegate: class {
+@objc public protocol OSTableViewDelegate: class {
     func configCell(with model: Any, for indexPath: IndexPath) -> UITableViewCell
-    func swipeRefresh()
-    func paginate()
-}
-
-extension OSTableViewDelegate {
-    func swipeRefresh() {
-        print("Default swipe refresh implementation, override it with your own")
-    }
-    func paginate() {
-        print("Default paginate implementation, override it with your own")
-    }
+    @objc optional func swipeRefresh()
+    @objc optional func paginate()
 }
 
 public class OSTableView: UITableView {
-    
     weak var osDelegate: OSTableViewDelegate?
     var sections: [OSSection] = []
     var lastElementCount: Int = 0
@@ -49,8 +39,7 @@ public class OSTableView: UITableView {
     public func useRefresh() {
         if #available(iOS 10.0, *) {
             self.refreshControl = UIRefreshControl()
-            refreshControl?.addTarget(self, action:
-                #selector(handleRefresh(_:)),
+            refreshControl?.addTarget(self, action: #selector(handleRefresh(_:)),
                                       for: UIControlEvents.valueChanged)
         } else {
             // Fallback on earlier versions
@@ -91,7 +80,7 @@ public class OSTableView: UITableView {
     }
     
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
-        osDelegate?.swipeRefresh()
+        osDelegate?.swipeRefresh?()
         lastElementCount = 0
     }
     
@@ -108,7 +97,7 @@ extension OSTableView: UITableViewDelegate, UITableViewDataSource {
         guard let del = osDelegate else { return UITableViewCell() }
         
         if canPaginateFor(indexPath: indexPath) {
-            del.paginate()
+            del.paginate?()
         }
         
         return del.configCell(with: element, for: indexPath)
@@ -150,8 +139,8 @@ extension OSTableView: UITableViewDelegate, UITableViewDataSource {
             spinner.startAnimating()
             spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
             
-//            self.tableFooterView = spinner
-//            self.tableFooterView?.isHidden = false
+            self.tableFooterView = spinner
+            self.tableFooterView?.isHidden = false
         }
     }
 }
