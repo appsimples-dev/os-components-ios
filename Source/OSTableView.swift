@@ -139,8 +139,8 @@ extension OSTableView: UITableViewDelegate, UITableViewDataSource {
             spinner.startAnimating()
             spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: tableView.bounds.width, height: CGFloat(44))
             
-            self.tableFooterView = spinner
-            self.tableFooterView?.isHidden = false
+//            self.tableFooterView = spinner
+//            self.tableFooterView?.isHidden = false
         }
     }
 }
