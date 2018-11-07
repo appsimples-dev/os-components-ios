@@ -41,7 +41,7 @@ class NotificationsExampleViewController: UIViewController {
         let notif2 = NotificationModel(image: "https://abrilveja.files.wordpress.com/2017/05/obama-berlim-02.jpg", title: "Presidente Obama", subtitle: nil, isFollowing: false, type: NotificationType.follow)
         let notif3 = NotificationModel(image: "https://abrilveja.files.wordpress.com/2017/05/obama-berlim-02.jpg", title: "Presidente Obama", subtitle: "Quer ser seu amigo", isFollowing: nil, type: NotificationType.add)
         let notif4 = NotificationModel(image: "https://abrilveja.files.wordpress.com/2017/05/obama-berlim-02.jpg", title: "", subtitle: "Nome do usuário mais 1 pessoa comentou no seu item Nome do item", isFollowing: nil, type: NotificationType.text)
-        list.append(OSTableView.buildSectionWith(array: [notif, notif2, notif3, notif4, notif, notif2, notif3, notif, notif2, notif3, notif4, notif, notif2, notif3, notif, notif2, notif3, notif4, notif, notif2, notif3, notif, notif2, notif3, notif4, notif, notif2, notif3], header: nil))
+        list.append(OSTableView.buildSectionWith(array: [notif, notif2, notif3, notif4], header: nil))
         tableView.reloadTableViewWith(data: list)
     }
 }
@@ -62,6 +62,10 @@ extension NotificationsExampleViewController: OSTableViewDelegate {
             break
         }
         return cell
+    }
+    
+    func paginate() {
+        tableView.reloadTableViewWith(data: list)
     }
 }
 

@@ -42,8 +42,14 @@ public class OSCellImage: UIView {
     public func setPrimaryImage(imageUrl: String?, placeholder: UIImage?, delegate: OSCellImageDelegate?) {
         primaryImageView.circularCorners()
         primaryImageView.isHidden = false
+        primaryImageView.image = placeholder
         if let imageUrl = imageUrl, let url = URL(string: imageUrl) {
-            primaryImageView.af_setImage(withURL: url)
+            primaryImageView.af_setImage(
+                withURL: url,
+                placeholderImage: placeholder,
+                filter: nil,
+                imageTransition: .crossDissolve(0.2),
+                completion: nil)
         } else if let placeholder = placeholder {
             primaryImageView.image = placeholder
         } else {
@@ -55,8 +61,14 @@ public class OSCellImage: UIView {
     public func setSecondaryImage(imageUrl: String?, placeholder: UIImage?) {
         secondaryImageView.circularCorners()
         secondaryImageView.isHidden = false
+        secondaryImageView.image = placeholder
         if let imageUrl = imageUrl, let url = URL(string: imageUrl) {
-            secondaryImageView.af_setImage(withURL: url)
+            secondaryImageView.af_setImage(
+                withURL: url,
+                placeholderImage: placeholder,
+                filter: nil,
+                imageTransition: .crossDissolve(0.2),
+                completion: nil)
         } else if let placeholder = placeholder {
             secondaryImageView.image = placeholder
         } else {
