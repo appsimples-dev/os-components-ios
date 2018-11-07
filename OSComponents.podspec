@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'OSComponents'
-  s.version          = '0.1.11'
+  s.version          = '0.1.12'
   s.summary          = 'OSComponents is a collections os components designed to help the apps development'
 
 # This description is used to generate tags and improve search results.
