@@ -1,6 +1,6 @@
 {
   "name": "OSComponents",
-  "version": "0.1.2",
+  "version": "0.1.13",
   "summary": "OSComponents is a collections os components designed to help the apps development",
   "description": "OSComponents is a collections os components designed to help the apps development",
   "homepage": "https://github.com/appsimples/os-components-ios",
@@ -13,13 +13,14 @@
   },
   "source": {
     "git": "https://github.com/appsimples/os-components-ios.git",
-    "tag": "0.1.2"
+    "tag": "0.1.13"
   },
   "social_media_url": "https://www.appsimples.com.br",
   "platforms": {
     "ios": "9.2"
   },
   "source_files": "Source/**/*",
+  "swift_version": "4.1",
   "resource_bundles": {
     "OSComponents": [
       "Source/**/*.xib",
