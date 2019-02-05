@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'OSComponents'
-  s.version          = '0.1.13'
+  s.version          = '0.1.14'
   s.summary          = 'OSComponents is a collections os components designed to help the apps development'
 
 # This description is used to generate tags and improve search results.
@@ -31,9 +31,9 @@ OSComponents is a collections os components designed to help the apps developmen
   s.ios.deployment_target = '9.2'
 
   s.source_files = 'Source/**/*'
-  
+
   s.swift_version = '4.1'
-  
+
   s.resource_bundles = {
       'OSComponents' => ['Source/**/*.xib', 'Media.xcassets/**/*.{png,jpg,json}']
   }
