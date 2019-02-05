@@ -67,6 +67,8 @@ public class OSCellInfo: UIView {
     public func setSecondaryText(text: String?) {
         guard let text = text else {
             secondaryLabel.hide()
+            let verticalSpace = NSLayoutConstraint(item: primaryLabel, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1, constant: 15)
+            NSLayoutConstraint.activate([verticalSpace])
             return
         }
         secondaryLabel.isHidden = false
