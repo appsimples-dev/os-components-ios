@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'OSComponents'
-  s.version          = '0.1.15'
+  s.version          = '0.1.16'
   s.summary          = 'OSComponents is a collections os components designed to help the apps development'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-OSComponents is a collections os components designed to help the apps development
+OSComponents is a collections os components designed to help the apps development!
                        DESC
 
   s.homepage         = 'https://github.com/appsimples/os-components-ios'
