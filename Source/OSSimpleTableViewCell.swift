@@ -65,6 +65,7 @@ public class OSSimpleTableViewCell: UITableViewCell, NibReusable {
         cellInfo.setPrimaryText(text: data.primaryText)
         cellInfo.setSecondaryText(text: data.secondaryText)
         cellInfo.setTertiaryText(text: data.tertiaryText)
+        cellInfo.setQuarternaryText(text: data.quarternaryText)
         cellInfo.config(primaryColor: configuration.primaryTextColor, secondaryColor: configuration.secondaryTextColor, selectable: configuration.textSelectable, delegate: self, showButton: configuration.moreButton)
     }
     
@@ -132,6 +133,7 @@ public struct OSSimpleCellConfiguration {
     public var primaryTextColor: UIColor?
     public var secondaryTextColor: UIColor?
     public var tertiaryTextColor: UIColor?
+    public var quarternaryTextColor: UIColor?
     public var textSelectable: Bool?
     public var buttonColor: UIColor?
     public var leftButtonColor: UIColor?
@@ -156,6 +158,7 @@ public struct OSSimpleCellData: Mappable {
     public var primaryText: String = ""
     public var secondaryText: String?
     public var tertiaryText: String?
+    public var quarternaryText: String?
     public var selected: Bool?
     
     public init() {
@@ -170,6 +173,7 @@ public struct OSSimpleCellData: Mappable {
         primaryText <- map["primaryText"]
         secondaryText <- map["secondaryText"]
         tertiaryText <- map["tertiaryText"]
+        quarternaryText <- map["quarternaryText"]
         selected <- map["selected"]
     }
     

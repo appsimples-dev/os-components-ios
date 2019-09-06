@@ -28,7 +28,7 @@ class CommentsExampleViewController: UIViewController {
     func setupTableView() {
         tableView.build(delegate: self)
         tableView.register(cellType: OSSimpleTableViewCell.self)
-        let comment = CommentModel(image: "https://abrilveja.files.wordpress.com/2017/05/obama-berlim-02.jpg", comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Ipsum dolor sit amet, consectetur adipiscing elit por. Ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Ipsum dolor sit amet, consectetur adipiscing elit", username: "Presidente Obama")
+        let comment = CommentModel(image: "https://abrilveja.files.wordpress.com/2017/05/obama-berlim-02.jpg", comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Ipsum dolor sit amet, consectetur adipiscing elit por. Ipsum dolor sit amet, consectetur adipiscing elit, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Ipsum dolor sit amet, consectetur adipiscing elit", username: "Presidente Obama", timeAgo: "2 horas" ,edited: "(Editado)")
         list.append(OSTableView.buildSectionWith(array: [comment, comment, comment, comment, comment, comment, comment], header: nil))
         tableView.reloadTableViewWith(data: list)
     }

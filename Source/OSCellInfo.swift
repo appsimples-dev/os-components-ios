@@ -20,6 +20,7 @@ public class OSCellInfo: UIView {
     @IBOutlet weak var primaryLabel: UILabel!
     @IBOutlet weak var secondaryLabel: UILabel!
     @IBOutlet weak var tertiaryLabel: UILabel!
+    @IBOutlet weak var quarternaryLabel: UILabel!
     @IBOutlet var moreButton: UIButton!
     @IBOutlet var moreButtonImage: UIImageView!
     var delegate: OSCellInfoDelegate?
@@ -50,6 +51,9 @@ public class OSCellInfo: UIView {
         
         tertiaryLabel.textColor = secondaryColor
         tertiaryLabel.isUserInteractionEnabled = selectable ?? true
+        
+        quarternaryLabel.textColor = secondaryColor
+        quarternaryLabel.isUserInteractionEnabled = false
         
         self.delegate = delegate
         moreButton.isHidden = !showButton
@@ -84,10 +88,20 @@ public class OSCellInfo: UIView {
         tertiaryLabel.text = text
     }
     
+    public func setQuarternaryText(text: String?) {
+        guard let text = text else {
+            quarternaryLabel.hide()
+            return
+        }
+        quarternaryLabel.isHidden = false
+        quarternaryLabel.text = text
+    }
+    
     func clear() {
         primaryLabel.isHidden = true
         secondaryLabel.isHidden = true
         tertiaryLabel.isHidden = true
+        quarternaryLabel.isHidden = true
     }
     
     public func setButtonImage(_ image: UIImage) {
