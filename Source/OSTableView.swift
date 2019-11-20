@@ -19,7 +19,7 @@ import Reusable
 public class OSTableView: UITableView {
     weak var osDelegate: OSTableViewDelegate?
     var sections: [OSSection] = []
-    var lastElementCount: Int = 0
+    public var lastElementCount: Int = 0
     var paginating: Bool = false
     public var canPaginate: Bool = false // Set this variable to enable pagination
     
